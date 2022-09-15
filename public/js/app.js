@@ -12,7 +12,7 @@ if(city.value){
 
     message1.textContent= 'loading .....'
     message2.textContent= '.....................'
-    fetch('http://localhost:3000/weather?city='+encodeURIComponent(city.value)).then((response)=>{
+    fetch('/weather?city='+encodeURIComponent(city.value)).then((response)=>{
  response.json().then((data)=>{
     if(data.error)
     {

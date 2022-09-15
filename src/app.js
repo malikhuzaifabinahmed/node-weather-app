@@ -5,6 +5,7 @@ const app = express()
 const request = require('request')
 const e = require('express')
 const forca= require('./forecast')
+const port = process.env.PORT || 3000
 
 pathpublicdir = path.join(__dirname,'../public')
 
@@ -73,6 +74,6 @@ app.get('*',(req,res)=>{
 
 })
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('server started ')
 })
